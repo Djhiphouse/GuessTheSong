@@ -32,7 +32,7 @@
                 <h1 class="font-bold">Welcher Song ist das?</h1>
             </div>
 
-            <div class="relative flex flex-col items-center">
+            <div wire:poll.750ms class="relative flex flex-col items-center">
                 <iframe class="sm:w-auto sm:h-auto md:w-[400px] md:h-[260px]" src="https://www.youtube.com/embed/{{ $videoId }}?autoplay=1&mute=0&controls=0&showinfo=0&modestbranding=1&loop=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 @if(\App\Models\GameUser::chechWin() == true)
                     <h1 class=" font-bold">
