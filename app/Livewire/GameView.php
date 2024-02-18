@@ -80,11 +80,11 @@ class GameView extends Component
 
         $videos = $response->json()['items'];
         $randomVideo = $videos[array_rand($videos)];
-        $this->videoId = $randomVideo['snippet']['resourceId']['videoId'];
-        $this->textToGuess = $randomVideo['snippet']['title'];
         Song::insertSongToDatabase($this->videoId, $this->textToGuess);
 
-
+        $currentsong = Song::getSong();
+        $this->textToGuess = $currentsong->textToGuess;
+        $this->videoId = $currentsong->videoID;
     }
 
 

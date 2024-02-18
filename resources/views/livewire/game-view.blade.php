@@ -61,12 +61,12 @@
                                 <h1>{{ substr($message->username, 0, 1) }}</h1>
                             </div>
                             <h1 class="text-green-800 font-bold">Erraten!</h1>
-                        @endif
+                        @else
                             <div class="w-8 h-8 rounded-full bg-pink-300 flex flex-row justify-center items-center mx-2">
                                 <h1>{{ substr($message->username, 0, 1) }}</h1>
                             </div>
                             <h1 class="font-bold ml-2">{{ $message->msg }}</h1>
-
+                        @endif
                     </div>
                 @endforeach
             </div>
