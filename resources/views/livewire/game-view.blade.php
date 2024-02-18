@@ -54,6 +54,7 @@
 
             <div wire:poll.750ms class="overflow-y-auto h-64 w-full flex flex-col-reverse">
                 @foreach($messages->reverse() as $message)
+                    @dd($message)
                     <div class="w-full flex flex-row mx-2 my-1">
                         @if($message->correct == 1)
                             <div class="w-8 h-8 rounded-full bg-green-700 flex flex-row justify-center items-center mx-2">
