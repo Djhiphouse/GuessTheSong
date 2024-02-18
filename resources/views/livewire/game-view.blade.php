@@ -47,12 +47,18 @@
 
 
 
-        <div wire:poll.750ms id="chat_box" class="mx-3 rounded-xl w-auto h-auto flex flex-col items-center space-y-2 border border-black my-3">
+        <div id="chat_box" class="mx-3 rounded-xl w-auto h-auto flex flex-col items-center space-y-2 border border-black my-3">
             <div class="w-full h-auto border-b border-black justify-center items-center flex flex-row">
                 <h1 class="mx-3 font-bold">ChatBox</h1>
             </div>
 
             <div wire:poll.750ms class="overflow-y-auto h-64 w-full flex flex-col-reverse">
+
+                <div class="w-8 h-8 rounded-full bg-blue-500 flex flex-row justify-center items-center mx-2">
+                    <h1>S</h1>
+                </div>
+                <h1 class="text-green-800 font-bold">System Nachricht</h1>
+
                 @foreach($messages->reverse() as $message)
                     @dd($message)
                     <div class="w-full flex flex-row mx-2 my-1">
